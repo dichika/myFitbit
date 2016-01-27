@@ -1,16 +1,16 @@
 #' @export
-getToken <- function(appname=NULL, key=NULL, secret=NULL){
+getToken <- function(key=NULL, secret=NULL){
   endpoint <- httr::oauth_endpoint(request="https://api.fitbit.com/oauth2/token",
                                    authorize="https://www.fitbit.com/oauth2/authorize",
                                    access="https://api.fitbit.com/oauth2/token"
   )
   if(all(is.null(appname), is.null(key), is.null(secret))){
-    myapp <- httr::oauth_app(Sys.getenv("FITBIT_APPNAME"),
+    myapp <- httr::oauth_app("myapp",
                                Sys.getenv("FITBIT_API_KEY"),
                                Sys.getenv("FITBIT_CONSUMER_SECRET")
     )
   }else{
-    myapp <- httr::oauth_app(appname, key, secret)
+    myapp <- httr::oauth_app("myapp", key, secret)
   }
   scope <- c("sleep",
              "activity",
