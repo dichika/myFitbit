@@ -4,7 +4,7 @@ getToken <- function(key=NULL, secret=NULL){
                                    authorize="https://www.fitbit.com/oauth2/authorize",
                                    access="https://api.fitbit.com/oauth2/token"
   )
-  if(all(is.null(appname), is.null(key), is.null(secret))){
+  if(all(is.null(key), is.null(secret))){
     myapp <- httr::oauth_app("myapp",
                                Sys.getenv("FITBIT_API_KEY"),
                                Sys.getenv("FITBIT_CONSUMER_SECRET")
