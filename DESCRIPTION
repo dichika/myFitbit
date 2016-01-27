@@ -1,0 +1,10 @@
+Package: myFitbit
+Type: Package
+Title: Get your data through Fitbit API.
+Version: 0.1.0
+Author: Tokorosawa Yoshio
+Description: Get your data through Fitbit API.
+License: MIT
+Imports:
+    httr,jsonlite
+RoxygenNote: 5.0.1
