@@ -1,13 +1,13 @@
 # myFitbit
 
-Fitbit APIからデータを取得するパッケージです。
+Fitbit APIからデータを取得するRパッケージです。
 自分の用途に必要な分（＋要望）にしか実装するつもりが無いのでmyFitbitとしています。
 
 ## Example
 
 ```r
 library("myFitbit")
-fitbit_token <- getToken("YOUR APP NAME", "YOUR API KEY", "YOUR CONSUMER SECRET")
+fitbit_token <- getToken("YOUR API KEY", "YOUR CONSUMER SECRET")
 
 # 睡眠の統計値データ
 getSleepdata("2016-01-27", fitbit_token)
